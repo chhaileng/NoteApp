@@ -27,6 +27,11 @@ class EditViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         noteTextView.delegate = self
         
+        self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "back")
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0.572, green: 0.572, blue: 0.572, alpha: 1.0)
+        self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "back")
+        self.navigationController?.navigationBar.backItem?.title = ""
+        
         if isUpdate {
             titleTextField.text = noteTitle
             noteTextView.text = noteBody

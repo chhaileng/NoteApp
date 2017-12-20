@@ -82,7 +82,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
-        
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         let layout = self.noteCollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.sectionInset = UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
         layout.minimumLineSpacing = 10
