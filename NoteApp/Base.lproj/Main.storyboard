@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gYn-mq-ade">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Notes-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Notes" id="BYZ-38-t0r" customClass="ViewController" customModule="NoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="K3R-EW-xRZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.94499540328979492" green="0.94515722990036011" blue="0.94498521089553833" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0jZ-9Z-WuX">
+                                    <size key="itemSize" width="178" height="152"/>
+                                    <size key="headerReferenceSize" width="0.0" height="8"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="noteCell" id="1sy-lc-N8F" customClass="NoteCell" customModule="NoteApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="8" width="178" height="152"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="178" height="152"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="DZC-El-2cf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="152"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXg-rf-dfE">
+                                                            <rect key="frame" x="8" y="8" width="162" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="Qnr-5V-dcK"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-cD-oAk">
+                                                            <rect key="frame" x="8" y="37" width="162" height="107"/>
+                                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" red="0.1498158285" green="0.15129915350000001" blue="0.15129915350000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sNG-cD-oAk" secondAttribute="bottom" constant="8" id="05U-qN-i6z"/>
+                                                        <constraint firstItem="uXg-rf-dfE" firstAttribute="top" secondItem="DZC-El-2cf" secondAttribute="top" constant="8" id="6yX-8w-vai"/>
+                                                        <constraint firstItem="sNG-cD-oAk" firstAttribute="top" secondItem="uXg-rf-dfE" secondAttribute="bottom" constant="8" id="A0y-Nf-snB"/>
+                                                        <constraint firstItem="uXg-rf-dfE" firstAttribute="leading" secondItem="DZC-El-2cf" secondAttribute="leading" constant="8" id="D5l-eh-4YH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="uXg-rf-dfE" secondAttribute="trailing" constant="8" id="ZYC-Jj-jj7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sNG-cD-oAk" secondAttribute="trailing" constant="8" id="sQ2-sE-5ze"/>
+                                                        <constraint firstItem="sNG-cD-oAk" firstAttribute="leading" secondItem="DZC-El-2cf" secondAttribute="leading" constant="8" id="ulx-PK-uLs"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="DZC-El-2cf" firstAttribute="leading" secondItem="1sy-lc-N8F" secondAttribute="leading" id="VcB-wu-XEP"/>
+                                            <constraint firstAttribute="trailing" secondItem="DZC-El-2cf" secondAttribute="trailing" id="W95-6I-vrv"/>
+                                            <constraint firstItem="DZC-El-2cf" firstAttribute="top" secondItem="1sy-lc-N8F" secondAttribute="top" id="YyT-2M-hdf"/>
+                                            <constraint firstAttribute="bottom" secondItem="DZC-El-2cf" secondAttribute="bottom" id="afu-BF-Jd9"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="noteLabel" destination="sNG-cD-oAk" id="3fm-gN-4kO"/>
+                                            <outlet property="titleLabel" destination="uXg-rf-dfE" id="8W2-Fj-faa"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="noteHeaderCell" id="G9r-Yq-cil">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="8"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jm0-aI-sYj">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Take a note..." id="CiG-zD-ECu">
+                                        <color key="tintColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6XR-jP-hAB"/>
+                                    <barButtonItem title="Item" image="list" id="tXb-rJ-q4R">
+                                        <color key="tintColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" image="pen" id="JSV-9L-K1D">
+                                        <color key="tintColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" image="mic" id="vv7-Id-GZQ">
+                                        <color key="tintColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="Item" image="camera" id="5vv-Vf-XAO">
+                                        <color key="tintColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jm0-aI-sYj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PPy-Lj-Ajt"/>
+                            <constraint firstItem="jm0-aI-sYj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PTE-My-68t"/>
+                            <constraint firstItem="K3R-EW-xRZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="QEs-ne-dcD"/>
+                            <constraint firstItem="K3R-EW-xRZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="S1i-Yf-VVc"/>
+                            <constraint firstItem="jm0-aI-sYj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="brc-kj-yZA"/>
+                            <constraint firstItem="K3R-EW-xRZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kF3-nE-nm4"/>
+                            <constraint firstItem="jm0-aI-sYj" firstAttribute="top" secondItem="K3R-EW-xRZ" secondAttribute="bottom" id="v3y-7e-8b0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notes" id="wJ4-25-czk">
+                        <rightBarButtonItems>
+                            <barButtonItem image="note" id="ac9-Gs-7oX">
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                            <barButtonItem image="search" id="yvk-sz-FtD">
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraButton" destination="5vv-Vf-XAO" id="RdL-5U-qD3"/>
+                        <outlet property="listButton" destination="tXb-rJ-q4R" id="iD8-x5-J5W"/>
+                        <outlet property="microphoneButton" destination="vv7-Id-GZQ" id="X75-4A-a5u"/>
+                        <outlet property="noteCollectionView" destination="K3R-EW-xRZ" id="Jmd-fU-fIR"/>
+                        <outlet property="penButton" destination="JSV-9L-K1D" id="IgF-q3-TFI"/>
+                        <outlet property="takeNoteButton" destination="CiG-zD-ECu" id="F5f-uM-jZT"/>
+                        <segue destination="xyZ-Ui-Itl" kind="show" identifier="showEdit" id="XyG-p4-Nwq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1562.4000000000001" y="34.632683658170919"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="98Z-yg-ZJB">
+            <objects>
+                <viewController storyboardIdentifier="editStoryboard" title="Edit" id="xyZ-Ui-Itl" customClass="EditViewController" customModule="NoteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MzH-BV-IQi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GSE-4s-qHn">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem image="add" id="t53-w4-vdl">
+                                        <color key="tintColor" red="0.57248467206954956" green="0.57258617877960205" blue="0.57247823476791382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="plusButton:" destination="xyZ-Ui-Itl" id="Phh-I1-928"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bm6-K4-Xhi"/>
+                                    <barButtonItem image="more" id="Ycm-z2-ep8">
+                                        <color key="tintColor" red="0.57248467206954956" green="0.57258617877960205" blue="0.57247823476791382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="moreButton:" destination="xyZ-Ui-Itl" id="asC-ZC-UPz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Note" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fbK-BJ-PWn">
+                                <rect key="frame" x="16" y="110" width="343" height="508"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.78416603803634644" green="0.78399282693862915" blue="0.80461865663528442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gXj-VQ-TSf">
+                                <rect key="frame" x="16" y="80" width="343" height="24"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gXj-VQ-TSf" firstAttribute="leading" secondItem="E4V-mx-awb" secondAttribute="leading" constant="16" id="DG1-7u-UJJ"/>
+                            <constraint firstItem="E4V-mx-awb" firstAttribute="trailing" secondItem="gXj-VQ-TSf" secondAttribute="trailing" constant="16" id="HXj-TN-NPm"/>
+                            <constraint firstItem="GSE-4s-qHn" firstAttribute="top" secondItem="fbK-BJ-PWn" secondAttribute="bottom" constant="5" id="LGI-2y-Ru2"/>
+                            <constraint firstItem="fbK-BJ-PWn" firstAttribute="leading" secondItem="E4V-mx-awb" secondAttribute="leading" constant="16" id="UcC-kh-weY"/>
+                            <constraint firstItem="GSE-4s-qHn" firstAttribute="leading" secondItem="E4V-mx-awb" secondAttribute="leading" id="YB4-wn-Mwb"/>
+                            <constraint firstItem="GSE-4s-qHn" firstAttribute="bottom" secondItem="E4V-mx-awb" secondAttribute="bottom" id="ajz-6w-9Nc"/>
+                            <constraint firstItem="gXj-VQ-TSf" firstAttribute="top" secondItem="E4V-mx-awb" secondAttribute="top" constant="16" id="c23-TX-ksb"/>
+                            <constraint firstItem="fbK-BJ-PWn" firstAttribute="top" secondItem="gXj-VQ-TSf" secondAttribute="bottom" constant="6" id="fpC-V1-dbN"/>
+                            <constraint firstItem="GSE-4s-qHn" firstAttribute="trailing" secondItem="E4V-mx-awb" secondAttribute="trailing" id="nrE-kd-2vf"/>
+                            <constraint firstItem="E4V-mx-awb" firstAttribute="trailing" secondItem="fbK-BJ-PWn" secondAttribute="trailing" constant="16" id="ou1-A3-3Pc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="E4V-mx-awb"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="94i-hm-TFx">
+                        <rightBarButtonItems>
+                            <barButtonItem image="save" id="hgT-OT-jy1">
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                            <barButtonItem image="finger" id="bho-8F-9gu">
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                            <barButtonItem image="pin" id="dA8-Dl-uLs">
+                                <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="noteTextView" destination="fbK-BJ-PWn" id="frM-3O-Mc6"/>
+                        <outlet property="titleTextField" destination="gXj-VQ-TSf" id="bgs-ZW-eti"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q15-Um-mX8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2436" y="-44.527736131934034"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zcU-0y-FSn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gYn-mq-ade" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NIw-aL-JBP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.8212161660194397" blue="0.096920602023601532" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Zqz-rt-0wy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Xv-L1-93H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762" y="170"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="25" height="25"/>
+        <image name="camera" width="30" height="30"/>
+        <image name="finger" width="30" height="30"/>
+        <image name="list" width="30" height="30"/>
+        <image name="mic" width="30" height="30"/>
+        <image name="more" width="25" height="25"/>
+        <image name="note" width="30" height="30"/>
+        <image name="pen" width="25" height="25"/>
+        <image name="pin" width="25" height="25"/>
+        <image name="save" width="30" height="30"/>
+        <image name="search" width="25" height="25"/>
+    </resources>
+</document>
